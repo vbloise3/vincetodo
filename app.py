@@ -97,3 +97,8 @@ def update_todo(uid):
 @app.route('/test-route', methods=['GET'])
 def test_route():
     return {'test': 'route'}
+
+
+@app.route('/test-pipeline')
+def test_pipeline():
+    return {'pipeline': 'route'}
