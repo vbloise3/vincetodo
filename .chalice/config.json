@@ -1,0 +1,14 @@
+{
+  "stages": {
+    "dev": {
+      "environment_variables": {
+        "USERS_TABLE_NAME": "users-app-4fab2c1c-c9bc-47d6-9102-3dc6adfe8dde",
+        "APP_TABLE_NAME": "todo-app-5d001999-632e-47b7-b45d-397c322857fb"
+      },
+      "autogen_policy": false,
+      "api_gateway_stage": "api"
+    }
+  },
+  "version": "2.0",
+  "app_name": "vincetodo"
+}
