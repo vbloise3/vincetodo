@@ -86,6 +86,9 @@ class TestTodoDB(unittest.TestCase):
         self.assertItemsEqual(['user', 'otheruser'], users)
         self.assertItemsEqual([todo_id, other_todo_id], todo_ids)
 
+    def test_fail(self):
+        assert 0 == 1
+
 
 @unittest.skipUnless(os.environ.get('RUN_INTEG_TESTS', False),
                      "Skipping integ tests (RUN_INTEG_TESTS) not test.")
@@ -135,6 +138,3 @@ class TestDynamoDB(TestTodoDB):
         resource = boto3.resource('dynamodb')
         self.table = resource.Table(self.TABLE_NAME)
         self.db = DynamoDBTodo(self.table)
-
-    def test_fail():
-        assert 0 == 1
