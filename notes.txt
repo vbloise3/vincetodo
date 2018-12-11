@@ -20,4 +20,3 @@ aws cloudformation describe-stacks \
 git add app.py
 git commit -m "Add test view"
 git push codecommit master
-
