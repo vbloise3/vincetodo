@@ -6,7 +6,7 @@ virtualenv /tmp/venv
 . /tmp/venv/bin/activate
 pip install -r requirements.txt
 pip install -r requirements-test.txt
-sudo pip install awscli --force-reinstall --upgrade
+#sudo pip install awscli --force-reinstall --upgrade
 #sudo pip install boto3 --upgrade
 pip install chalice
 export PYTHONPATH=.
