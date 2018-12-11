@@ -1,2 +1,16 @@
 pip install --upgrade boto3
-user: Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE1NDQzOTIyMjksImp0aSI6IjMxNGRkZjY2LWQ4NmUtNDc5Yi1hYjdmLWI5MGZjZDZiOTAwOSIsInN1YiI6InZibG9pc2UzIiwibmJmIjoxNTQ0MzkyMjI5fQ.c0l8Q7XN3XLC6oNIHDxzTO4nS6WLoy4d1RlkmaORRi4
+
+source repo: https://git-codecommit.us-east-2.amazonaws.com/v1/repos/vincetodo
+
+vbloise3 user: Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE1NDQ0ODc4MDIsImp0aSI6IjNjZjEyMDE5LTdiODEtNGNlMS05NzJkLWQ0OTk0MjEwZTc0OCIsInN1YiI6InZibG9pc2UzIiwibmJmIjoxNTQ0NDg3ODAyfQ.AH6XhAnO-vxFN1E9byKvu9rXjSFUHVtsqKvnoryGIVU
+
+EndpointURL: https://woukvqc2t9.execute-api.us-east-2.amazonaws.com/api/
+
+"BuildSpec": "version: 0.1\nphases:\n  install:\n    commands:\n      - sudo pip install --upgrade awscli\n      - aws --version\n      - sudo pip install 'chalice>=1.6.0,<1.7.0'\n      - sudo pip install -r requirements.txt\n   -sudo pip install --upgrade boto3\n   - chalice package /tmp/packaged\n      - aws cloudformation package --template-file /tmp/packaged/sam.json --s3-bucket ${APP_S3_BUCKET} --output-template-file transformed.yaml\nartifacts:\n  type: zip\n  files:\n    - transformed.yaml\n",
+
+aws cloudformation describe-stacks --stack-name vincetodoBetaStack \
+    --query Stacks[0].Outputs
+
+git add app.py
+git commit -m "Add test view"
+git push codecommit master
