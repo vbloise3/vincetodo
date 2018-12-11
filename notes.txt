@@ -11,6 +11,12 @@ EndpointURL: https://woukvqc2t9.execute-api.us-east-2.amazonaws.com/api/
 aws cloudformation describe-stacks --stack-name vincetodoBetaStack \
     --query Stacks[0].Outputs
 
+cloud formation stack:
+aws cloudformation describe-stacks \
+--stack-name vincetodoBetaStack \
+--query Stacks[0].Outputs
+
+
 git add app.py
 git commit -m "Add test view"
 git push codecommit master
