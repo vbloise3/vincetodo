@@ -138,4 +138,3 @@ class TestDynamoDB(TestTodoDB):
         resource = boto3.resource('dynamodb')
         self.table = resource.Table(self.TABLE_NAME)
         self.db = DynamoDBTodo(self.table)
-
