@@ -137,5 +137,5 @@ class TestDynamoDB(TestTodoDB):
         self.db = DynamoDBTodo(self.table)
 
 
-def test_fail():
-    assert 0 == 1
+#def test_fail():
+#    assert 0 == 1
