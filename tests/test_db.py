@@ -86,8 +86,8 @@ class TestTodoDB(unittest.TestCase):
         self.assertItemsEqual(['user', 'otheruser'], users)
         self.assertItemsEqual([todo_id, other_todo_id], todo_ids)
 
-    def test_fail(self):
-        assert 0 == 1
+    def test_not_fail(self):
+        assert 1 == 1
 
 
 @unittest.skipUnless(os.environ.get('RUN_INTEG_TESTS', False),
