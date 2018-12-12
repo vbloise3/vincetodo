@@ -107,3 +107,4 @@ def test_pipeline():
 @app.route('/test-html')
 def test_pipeline():
     return {'pipeline': '<html><h1>Hello, Vanguard</h1></html>'}
+
